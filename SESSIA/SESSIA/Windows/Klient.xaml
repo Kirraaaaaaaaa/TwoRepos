@@ -1,0 +1,32 @@
+﻿<Window x:Class="SESSIA.Windows.Klient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SESSIA.Windows"
+        mc:Ignorable="d"
+        Title="Klient" MinHeight="720" MinWidth="1280"
+        WindowStartupLocation="CenterOwner"
+        WindowState="Maximized">
+    <Grid >
+        <Viewbox Margin="40">
+            <StackPanel Height="122" Width="350" Background="#FF76E383">
+                <ListView x:Name="Product_List" Height="99" SelectionChanged="ListView_SelectionChanged_1" Margin="60,0" Background="LightGray">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Height="5" Width="350">
+                                <TextBlock FontSize="3" Text="{Binding Product_ArticleNumber}"/>
+                                <TextBlock FontSize="3" Text="{Binding Product_Name}"/>
+                                <TextBlock FontSize="3" Text="{Binding Product_Cost}"/>
+                                <TextBlock FontSize="3" Text="{Binding Product_Category}"/>
+                                <TextBlock FontSize="3" Text="{Binding Product_QuantityInStock}"/>
+                                <TextBlock FontSize="3" Text="{Binding Product_Description}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button x:Name="Back_BTN" Content="Назад" Click="Back_BTN_Click" ToolTip="Нажмите чтобы вернуться назад" FontSize="5" Background="#FF498C51" FontFamily="Comic Sans MS" Height="17" Margin="71,0,75,0"/>
+            </StackPanel>
+        </Viewbox>
+    </Grid>
+</Window>

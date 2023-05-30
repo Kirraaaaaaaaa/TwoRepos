@@ -1,0 +1,34 @@
+﻿<Window x:Class="SESSIA.Windows.Manager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SESSIA.Windows"
+        mc:Ignorable="d"
+        Title="Manager" MinHeight="720" MinWidth="1280"
+        WindowStartupLocation="CenterOwner"
+        WindowState="Maximized"
+        >
+    <Grid>
+        <Viewbox Margin="40">
+            <StackPanel  Height="115" Width="190" Background="#FF76E383">
+                <StackPanel Orientation="Vertical" Margin="48,0,-56,0">
+                    <TextBox x:Name="Product_Name" FontSize="3" ToolTip="Введите название продукта" Margin="0,0,103,0" Height="8"/>
+                    <TextBox x:Name="Product_Metric" FontSize="3"  ToolTip="Введите метрику продукта" Margin="0,0,103,0" Height="7"/>
+                    <TextBox x:Name="Product_Cost" FontSize="3" ToolTip="Введите цену продукта" Margin="0,0,103,0" Height="7"/>
+                    <TextBox x:Name="Product_ArticleNumber" ToolTip="Введите артикул" Margin="0,0,103,0" Height="8"/>
+                    <TextBox x:Name="Product_MaxDiscount" FontSize="3" ToolTip="Введите максимальную скидку продукта" Margin="0,0,103,0" Height="7"/>
+                    <TextBox x:Name="Product_Manufacturer" FontSize="3" ToolTip="Введите производителя продукта" Margin="0,0,103,0" Height="7"/>
+                    <TextBox x:Name="Product_Provider" FontSize="3" ToolTip="Введите изготовителя продукта" Margin="0,0,103,0" Height="7"/>
+                    <TextBox x:Name="Product_Category" FontSize="3" ToolTip="Введите категорию продукта" Margin="0,0,103,0" Height="7"/>
+                    <TextBox x:Name="Product_CurrentDiscount" FontSize="3" ToolTip="Введите минимальную скидку продукта" Margin="0,0,103,0" Height="6"/>
+                    <TextBox x:Name="Product_QuantityInStock" FontSize="3" ToolTip="Введите количество продукта на складе" Margin="0,0,103,0" Height="7"/>
+                    <TextBox x:Name="Product_Description" FontSize="3" ToolTip="Введите описание продукта" Margin="0,0,103,0" Height="7"/>
+                </StackPanel>
+                <Button x:Name="Insert_BTN" Content="Добавить" FontFamily="Comic Sans MS" Click="Insert_BTN_Click" FontSize="6" Margin="10,0,130,0" Height="15" Background="#FF498C51"/>
+                <Button x:Name="Back_BTN" Content="Назад" FontFamily="Comic Sans MS" FontSize="6" Click="Back_BTN_Click" Margin="74,0,73,0" RenderTransformOrigin="0.5,0.5" Background="#FF498C51"/>
+
+            </StackPanel>
+        </Viewbox>
+    </Grid>
+</Window>
